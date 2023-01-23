@@ -3,7 +3,7 @@
 <p><%=c1%></p>
 <h2>Blogs</h2>
 <%  posts.forEach(function(element){ %> 
-    <h3> <%= element.blogTitle %> </h3>
-    <p>  <%= element.blog.substring(0, 100) + "..."%> <a href="/posts/<%=_.kebabCase(element.blogTitle)%>">Read More</a></p>
+    <h3> <%= _.capitalize(element.title) %> </h3>
+    <p>  <%= element.blog.substring(0, 100) + "..."%> <a href="/posts/<%=element.title%>">Read More</a></p>
 <%}) %> 
 <%- include("partials/footer")-%>
